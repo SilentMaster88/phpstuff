@@ -1,0 +1,16 @@
+<?php
+function grabYouTubeId($url) {
+if (preg_match('%youtube\\.com/(.+)%', $url, $match)) {
+$match = $match[1];
+$replace = array("watch?v=", "v/", "vi/");
+$match = str_replace($replace, "", $match);
+}
+return $match;
+}
+
+/* Example of use:
+
+$videoId = grabYouTubeId("http://www.youtube.com/watch?v=Fv2aS8YtpmU");
+echo $videoId;
+*/
+?>
