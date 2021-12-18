@@ -1,0 +1,12 @@
+<?php
+
+// get and print the current directory: 
+echo getcwd() . "\n"; 
+
+// Change the directory of destination:
+chdir('nomecartella');
+
+// Print the current directory after the change: 
+echo getcwd() . "\n";
+
+?>
